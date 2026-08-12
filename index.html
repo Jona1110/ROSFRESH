@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rosfresh | Menú Digital</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div id="toast-container" class="toast-container"></div>
+   <header class="hero">
+        <div class="hero-content">
+            <!-- Logo Oficial de Rosfresh -->
+            <div class="brand-logo-container">
+                <img src="assets/image.png" alt="Rosfresh Logo">
+            </div>
+            
+            <h1 class="brand-title">Roshfresh</h1>
+            <p class="brand-subtitle">Snacks, Postres y Bebidas</p>
+            
+            <!-- Lema Añadido -->
+            <p class="brand-slogan">"El toque más fresco y dulce de tu día 🍓"</p>
+
+            <div class="search-bar">
+                <i class="fas fa-search"></i>
+                <input type="text" id="searchInput" placeholder="¿Qué se te antoja hoy?">
+            </div>
+        </div>
+    </header>
+    <nav class="categories" id="categoryNav">
+        <button class="cat-btn active" data-cat="Todos">Todos</button>
+        <button class="cat-btn" data-cat="Snacks">Snacks</button>
+        <button class="cat-btn" data-cat="Bebidas">Bebidas</button>
+        <button class="cat-btn" data-cat="Postres">Postres</button>
+    </nav>
+    <main class="menu-container" id="menuContainer">
+        <div class="loader-container">
+            <div class="spinner"></div>
+            <p>Preparando el menú...</p>
+        </div>
+    </main>
+    <button class="floating-cart" id="cartBtn">
+        <i class="fas fa-shopping-bag"></i>
+        <span class="cart-count" id="cartCount">0</span>
+    </button>
+    <div class="cart-overlay" id="cartOverlay"></div>
+    <div class="cart-drawer" id="cartDrawer">
+        <div class="cart-header">
+            <h2>Tu Pedido</h2>
+            <button id="closeCartBtn" class="close-btn"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <div class="empty-cart"><i class="fas fa-shopping-basket"></i><p>Tu carrito está vacío</p></div>
+        </div>
+        <div class="cart-footer">
+            <div class="total-row"><span>Total estimado:</span><span class="total-price">$<span id="cartTotal">0.00</span></span></div>
+            <button class="btn-whatsapp" id="btnSendOrder"><i class="fab fa-whatsapp"></i> Enviar pedido</button>
+        </div>
+    </div>
+
+    <!-- MODAL DE PERSONALIZACIÓN DE TOPPINGS Y SALSAS -->
+    <div class="cart-overlay" id="customModalOverlay" style="z-index: 105;"></div>
+    <div id="customModal" class="custom-modal">
+        <div class="custom-modal-header">
+            <h2>Personaliza tu <span id="modalProductName">Producto</span></h2>
+            <button class="close-btn" id="closeCustomModal"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="custom-modal-body">
+            <h3>🍫 Elige tus Salsas</h3>
+            <div class="options-grid" id="salsasContainer">
+                <label><input type="checkbox" name="salsa" value="Nutella"> Nutella</label>
+                <label><input type="checkbox" name="salsa" value="Hershey's"> Hershey’s</label>
+                <label><input type="checkbox" name="salsa" value="Mermelada"> Mermelada</label>
+                <label><input type="checkbox" name="salsa" value="Lotus"> Lotus</label>
+                <label><input type="checkbox" name="salsa" value="Dubái"> Dubái</label>
+                <label><input type="checkbox" name="salsa" value="Rafaelo"> Rafaelo</label>
+            </div>
+
+            <h3>✨ Elige tus Toppings</h3>
+            <div class="options-grid" id="toppingsContainer">
+                <label><input type="checkbox" name="topping" value="Mini Kisses"> Mini Kisses</label>
+                <label><input type="checkbox" name="topping" value="Arroz inflado"> Arroz inflado</label>
+                <label><input type="checkbox" name="topping" value="Coco"> Coco</label>
+                <label><input type="checkbox" name="topping" value="Coco tostado"> Coco tostado</label>
+                <label><input type="checkbox" name="topping" value="Chispitas de colores"> Chispitas de colores</label>
+                <label><input type="checkbox" name="topping" value="Chispitas de chocolate"> Chispitas de chocolate</label>
+                <label><input type="checkbox" name="topping" value="Cereales"> Cereales</label>
+                <label><input type="checkbox" name="topping" value="Nuez"> Nuez</label>
+            </div>
+        </div>
+        <div class="custom-modal-footer">
+            <button id="confirmCustomBtn" class="btn-whatsapp" style="justify-content: center;"><i class="fas fa-check"></i> Agregar al Carrito</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
