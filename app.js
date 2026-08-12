@@ -1,6 +1,6 @@
 // --- CONFIGURACIÓN ---
 const API_URL = "https://script.google.com/macros/s/AKfycbzEWadNGyMnFZu_DZLAeRqn395nOcR-24DsEZxlXYmdlZpFhCG2BPY1U5JBgp64SLiFWw/exec"; 
-const WHATSAPP_NUMBER = "523322961969";
+const WHATSAPP_NUMBER = "523318557343";
 
 let allProducts = [];
 let cart = JSON.parse(localStorage.getItem('rosfresh_cart')) || [];
