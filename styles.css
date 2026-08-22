@@ -110,6 +110,46 @@ body {
     text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 }
 
+/* --- REDES SOCIALES --- */
+.social-links {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 25px;
+    justify-content: center;
+}
+
+.social-btn {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3rem;
+    color: var(--white);
+    text-decoration: none;
+    transition: var(--transition);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.social-btn:hover {
+    transform: translateY(-5px);
+    background: var(--white);
+}
+
+.social-btn.instagram:hover {
+    color: #E1306C;
+    box-shadow: 0 8px 20px rgba(225, 48, 108, 0.4);
+}
+
+.social-btn.tiktok:hover {
+    color: #000000;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
 /* --- ESTILOS DE INFORMACIÓN DE TIENDA (HORARIOS) --- */
 .store-info {
     background: rgba(255, 255, 255, 0.15);
@@ -145,7 +185,7 @@ body {
 }
 
 .closed-day {
-    color: #000000;
+    color: #ff7675;
     font-weight: bold;
 }
 
